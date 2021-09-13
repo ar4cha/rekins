@@ -11,12 +11,15 @@ def lietotaja_ievade():
     garums = input('cik izmers kastisti velies')
     augstums = input('Cik augstums kastisti velies?')
     platums = input('Cik platu kastisti velies? (tikai veselie skaitli): ')
-    kokmateriala_cena = input('Kokmateriala cena')
-    return vards,teksts, platums, garums, augstums, kokmateriala_cena
+    materiala = input('materiala cena')
+    return vards,teksts, platums, garums, augstums, materiala
 
 if __name__ == '__main__':
     print_info()
-    while 1>0:
+    while True:
        lietotaja_ievade()
-       rekins = rekins.Rekins()
-       run_again = input('Vai velies sagatavot rekinu velreiz? JAA - 1, NEE - 0')
+       run_again = input('tu gribi velreiz? JA-1, NE-0 :')
+       if run_again == 1:
+           continue
+       else:
+           exit(0)
