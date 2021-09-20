@@ -2,24 +2,24 @@ import rekins
 
 def print_info():
 
-    print('Programma rekina sagatavosanai')
+    print('Invoicing program')
 
 def lietotaja_ievade():
 
-    vards = input('ieraksta savu vardu: ')
-    teksts = input('ieraksti savu tekstu:')
-    garums = input('cik izmers kastisti velies')
-    augstums = input('Cik augstums kastisti velies?')
-    platums = input('Cik platu kastisti velies? (tikai veselie skaitli): ')
-    materiala = input('materiala cena')
-    return vards,teksts, platums, garums, augstums, materiala
+    name = input('Your Name: ')
+    tekst = input('Your Tekst:')
+    size = input('how much size box do you want:')
+    height = input('How much height does the box want?:')
+    width = input('How wide a box do you want? (integers only): ')
+    material = input('material price')
+    return name,tekst, width, height,material , size
 
 if __name__ == '__main__':
     print_info()
     while True:
        lietotaja_ievade()
-       run_again = input('tu gribi velreiz? JA-1, NE-0 :')
-       if run_again == 1:
-           continue
-       else:
-           exit(0)
+       restart = input('do you want again?').lower()
+       if restart == "yes":
+           print_info()
+    else:
+        exit()
