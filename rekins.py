@@ -1,9 +1,9 @@
 class Rekins:
 
-    def __init__(self,name,tekst,size,height,width,material):
+    def __init__(self,name,tekst,height,width,material,length):
         self.name = name
         self.tekst = tekst
-        self.size = size
         self.height = height
         self.width = width
         self.material = material
+        self.length = length

@@ -5,11 +5,10 @@ def print_info():
     print('Invoicing program')
 
 def lietotaja_ievade():
-    print("\033[31m{}\033[0m".format("A bill is proposed legislation under consideration by a legislature.\n "
+    print("\033[94m{}\033[0m".format("A bill is proposed legislation under consideration by a legislature.\n "
                                      "A bill does not become law until it is passed by the legislature and, in most cases, approved by the executive."))
     name = input('Your Name: ')
     tekst = input('Your Tekst:')
-    size = float(input('how much size box do you want:'))
     height = float(input('How much height does the box want?:'))
     width = float(input('How wide a box do you want? (integers only): '))
     material = float(input('material price'))
@@ -22,12 +21,18 @@ def lietotaja_ievade():
     PVN_summa = produkta_cena + darba_samaksa * PVN / 100
     rekina_summa = produkta_cena + darba_samaksa + PVN_summa
 
-    putin = [str(produkta_cena),str(PVN_summa), str(rekina_summa)]
+    putin = [format(produkta_cena),format(PVN_summa),format(rekina_summa),format(name),format(tekst)]
 
     f = open("rekins.txt", "w")
-    f.write("Produkta cena: €" + str(produkta_cena))
-    f.write(str(PVN_summa))
-    f.write(str(rekina_summa))
+    f.write("Your name:" + format(name))
+    f.write("\n")
+    f.write("Your Tekst: " + format(tekst))
+    f.write("\n")
+    f.write("Produkta cena: " + format(produkta_cena, ",.2f") + "€")
+    f.write("\n")
+    f.write("PVN summa: " + format(PVN_summa, ",.2f")+ "€")
+    f.write("\n")
+    f.write("rekina_summa: " + format(rekina_summa, ",.2f")+ "€")
     f.close()
 
     print("Produkta cena: €" + format(produkta_cena, ",.2f"))
