@@ -25,7 +25,9 @@ def lietotaja_ievade():
     putin = [str(produkta_cena),str(PVN_summa), str(rekina_summa)]
 
     f = open("rekins.txt", "w")
-    f.write()
+    f.write("Produkta cena: €" + str(produkta_cena))
+    f.write(str(PVN_summa))
+    f.write(str(rekina_summa))
     f.close()
 
     print("Produkta cena: €" + format(produkta_cena, ",.2f"))
