@@ -1,5 +1,6 @@
-Your name:artjoms
-Your Tekst: fsafwrf
+date:2021-09-26
+Your name:20
+Your Tekst: 20
 Produkta cena: 0.05ˆ
 PVN summa: 3.20ˆ
 rekina_summa: 18.26ˆ

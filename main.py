@@ -11,7 +11,7 @@ def lietotaja_ievade():
     tekst = input('Your Tekst:')
     height = float(input('How much height does the box want?:'))
     width = float(input('How wide a box do you want? (integers only): '))
-    material = float(input('material price'))
+    material = float(input('material price :'))
     length = float(input('How much length does the box want?'))
 
     darba_samaksa = 15
@@ -21,9 +21,11 @@ def lietotaja_ievade():
     PVN_summa = produkta_cena + darba_samaksa * PVN / 100
     rekina_summa = produkta_cena + darba_samaksa + PVN_summa
 
-    putin = [format(produkta_cena),format(PVN_summa),format(rekina_summa),format(name),format(tekst)]
+    putin = [format(produkta_cena),format(PVN_summa),format(rekina_summa),format(name),format(tekst),format(today)]
 
     f = open("rekins.txt", "w")
+    f.write("date: " + format(today))
+    f.write("\n")
     f.write("Your name:" + format(name))
     f.write("\n")
     f.write("Your Tekst: " + format(tekst))
